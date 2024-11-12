@@ -1,0 +1,127 @@
+/* Estilos generales */
+body {
+    font-family: 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffe6e6;
+  }
+  
+  .container {
+    text-align: center;
+    background: #fff0f5;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+  }
+  
+  h1 {
+    font-size: 2em;
+    color: #ff66b2;
+    margin-bottom: 20px;
+  }
+  
+  .heart-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .heart {
+    width: 30px;
+    height: 30px;
+    background-color: #ff66b2;
+    position: relative;
+    transform: rotate(-45deg);
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: #ff66b2;
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -15px;
+    left: 0;
+  }
+  
+  .heart::after {
+    top: 0;
+    left: 15px;
+  }
+  
+  button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #yes {
+    background-color: #ff66b2;
+    color: white;
+  }
+  
+  #no {
+    background-color: #ddd;
+    color: black;
+    position: relative;
+  }
+  
+  /* Estilos responsive */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.5em;
+    }
+    
+    .heart {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .heart::before,
+    .heart::after {
+      width: 20px;
+      height: 20px;
+    }
+  
+    button {
+      font-size: 1em;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.2em;
+    }
+  
+    .heart {
+      width: 15px;
+      height: 15px;
+    }
+  
+    .heart::before,
+    .heart::after {
+      width: 15px;
+      height: 15px;
+    }
+  
+    button {
+      font-size: 0.9em;
+      padding: 6px 12px;
+      margin: 5px;
+    }
+  }
+  
